@@ -70,6 +70,10 @@ class Quiz:
 
 
         if UserAnswer == self.answers[0]:
+            if Quiz.points == 50000:
+                print(Fore.GREEN + 'Gratulacje! Wygrywasz!')
+                exit(0)
+
             Quiz.points = Quiz.modifer[Quiz.qNumber]
             Quiz.qNumber += 1
             print('To poprawna odpowiedź! \n')
